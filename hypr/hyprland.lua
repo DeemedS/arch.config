@@ -7,7 +7,7 @@ end)
 
 -- KEYBINDS
 hl.bind("SUPER + T", hl.dsp.exec_cmd("kitty") )
-hl.bind("SUPER + E", hl.dsp.exec_cmd("dolpin") )
+hl.bind("SUPER + E", hl.dsp.exec_cmd("dolphin") )
 hl.bind("SUPER + P", hl.dsp.exec_cmd("killall waybar; waybar") )
 hl.bind("SUPER + B", hl.dsp.exec_cmd("brave --password-store=basic") )
 hl.bind("SUPER + Q", hl.dsp.window.close())

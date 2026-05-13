@@ -16,3 +16,18 @@ Thumbnails/
 # browser profiles (optional)
 BraveSoftware/
 chromium/
+
+dconf/
+go/
+pulse/
+session/
+
+# KDE / Dolphin settings
+dolphinrc
+baloofileinformationrc
+
+# KDE Wallet (IMPORTANT - contains sensitive data)
+kwalletrc
+kwalletdrc
+kwallet5rc
+kwallet6rc

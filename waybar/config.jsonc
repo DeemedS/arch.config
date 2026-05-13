@@ -1,0 +1,23 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio"],
+
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+
+    "pulseaudio": {
+    	"format": "{icon} {volume}%",
+    	"format-muted": "MUTED",
+    	"format-icons": {
+        	"default": ["", "", ""]
+    	},
+    	"on-click": "pavucontrol"
+    }
+
+}

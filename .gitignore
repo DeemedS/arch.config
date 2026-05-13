@@ -1,0 +1,18 @@
+# caches
+cache/
+Cache/
+*.log
+
+# secrets
+*.key
+*.pem
+*.env
+**/secrets/
+
+# system junk
+Trash/
+Thumbnails/
+
+# browser profiles (optional)
+BraveSoftware/
+chromium/

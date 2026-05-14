@@ -5,12 +5,14 @@ vim.opt.relativenumber = true
 
 -- keep transparency for editor
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }
+)
 
--- Lazy UI background
-vim.api.nvim_set_hl(0, "LazyNormal", { bg = "#1e1e2e" })
-vim.api.nvim_set_hl(0, "LazyBackdrop", { bg = "none" })
+-- Add proper floating border color
+vim.api.nvim_set_hl(0, "FloatBorder", {
+  fg = "#89b4fa",
+  bg = "none",
+})
 
 require("deemeds.remap")
 require("deemeds.lazy")

@@ -11,7 +11,7 @@ hl.workspace_rule({
 	workspace = "r[1-10]",
 	gaps_out = 12,
 	gaps_in = 6,
-	border_size = 1,
+	border_size = 0,
 })
 
 

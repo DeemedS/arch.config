@@ -1,11 +1,21 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 34,
+    "spacing": 0,
 
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio"],
+    "modules-left": [
+	"cpu",
+	"memory",
+	"custom/gpu",
+	"temperature"
+    ],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [
+        "network",
+	"pulseaudio",
+	"clock"
+    ],
 
     "clock": {
         "format": "{:%H:%M}"
@@ -18,6 +28,86 @@
         	"default": ["", "", ""]
     	},
     	"on-click": "pavucontrol"
-    }
+    },
+	
+    "hyprland/workspaces": {
+	"on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "active": "󱓻",
+            "urgent": "󱓻"
+    },       
+    	"persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "memory": {
+    	"interval": 5,
+    	"format": "󰘚  {used:0.1f}G"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "{calendar}",
+        "format-alt": "  {:%a, %d %b %Y}",
+        "format": "  {:%I:%M %p}"
+    },
 
+    "network": {
+        "format-wifi" : "{icon}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-ethernet": "󰀂",
+	"format-alt" : "󱛇",
+        "format-disconnected" : "󰖪",
+	"tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+	"tooltip-format-disconnected": "Disconnected",
+	"on-click": "~/.config/rofi/wifi/wifi.sh &",
+        "on-click-right": "~/.config/rofi/wifi/wifinew.sh &",
+	"interval": 5,
+	"nospacing": 1
+    },
+
+    "wireplumber": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂰",
+        "nospacing": 1,
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "default": ["󰖀","󰕾",""]
+        },
+        "on-click": "pamixer -t",
+        "scroll-step": 1
+    },
+
+    "cpu": {
+    	"format": "  {usage}%",
+    	"tooltip": true,
+    	"interval": 2
+    },
+    "custom/gpu": {
+    	"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    	"format": "󰢮  {}%",
+    	"interval": 2
+    },
+    "temperature": {
+    	"hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+    	"critical-threshold": 80,
+    	"format": "  {temperatureC}°C"
+    }
 }

@@ -6,6 +6,14 @@ hl.on("hyprland.start", function ()
 end)
 
 -- ********** APPEARANCE **********
+hl.workspace_rule({
+	decorate = true,
+	workspace = "r[1-10]",
+	gaps_out = 12,
+	gaps_in = 6,
+	border_size = 1,
+})
+
 
 -- ********** KEYBINDS **********
 
@@ -52,3 +60,4 @@ hl.window_rule({
   float = true,
   size = { 900, 600 }
 })
+

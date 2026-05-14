@@ -21,6 +21,7 @@ dconf/
 go/
 pulse/
 session/
+gh/
 
 # KDE / Dolphin settings
 dolphinrc
@@ -31,3 +32,5 @@ kwalletrc
 kwalletdrc
 kwallet5rc
 kwallet6rc
+
+kiorc

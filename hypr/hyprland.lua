@@ -2,7 +2,7 @@
 hl.on("hyprland.start", function () 
   hl.exec_cmd("waybar")
   hl.exec_cmd("hyprpaper")
-
+  hl.exec_cmd("hyprlock")
 end)
 
 -- ********** APPEARANCE **********
@@ -22,6 +22,7 @@ hl.bind("SUPER + T", hl.dsp.exec_cmd("kitty") )
 hl.bind("SUPER + E", hl.dsp.exec_cmd("dolphin") )
 hl.bind("SUPER + P", hl.dsp.exec_cmd("killall waybar; waybar") )
 hl.bind("SUPER + B", hl.dsp.exec_cmd("brave --password-store=basic") )
+hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock") )
 
 --functional
 hl.bind("SUPER + Q", hl.dsp.window.close())

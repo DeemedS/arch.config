@@ -2,6 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
 
 -- keep transparency for editor
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

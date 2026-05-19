@@ -22,6 +22,7 @@ go/
 pulse/
 session/
 gh/
+htop/
 
 # KDE / Dolphin settings
 dolphinrc

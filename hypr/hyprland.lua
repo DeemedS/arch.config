@@ -23,6 +23,7 @@ hl.bind("SUPER + E", hl.dsp.exec_cmd("dolphin") )
 hl.bind("SUPER + P", hl.dsp.exec_cmd("killall waybar; waybar") )
 hl.bind("SUPER + B", hl.dsp.exec_cmd("brave --password-store=basic") )
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock") )
+hl.bind("SUPER + S", hl.dsp.exec_cmd("spotify-launcher") )
 
 --functional
 hl.bind("SUPER + Q", hl.dsp.window.close())
